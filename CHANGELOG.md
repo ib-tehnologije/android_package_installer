@@ -1,3 +1,9 @@
+## 0.0.2+3
+
+- 支持`provider authorities`->`${applicationId}.fileProvider`
+- 支持`provider authorities`->`${applicationId}.fileprovider`
+- 支持`provider authorities`->`${applicationId}`
+
 ## 0.0.2+2
 
 - 更新文档
