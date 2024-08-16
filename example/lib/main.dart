@@ -1,4 +1,4 @@
-import 'package:android_package_installer/android_package_installer.dart';
+import 'package:flutter_android_package_installer/flutter_android_package_installer.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

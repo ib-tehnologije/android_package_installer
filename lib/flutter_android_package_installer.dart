@@ -1,6 +1,6 @@
-import 'package:android_package_installer/src/installer_platform.dart';
+import './src/installer_platform.dart';
 
-export 'package:android_package_installer/src/enums.dart';
+export './src/enums.dart';
 
 class AndroidPackageInstaller {
   /// Installs apk file using Android Package Manager.
