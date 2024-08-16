@@ -26,7 +26,8 @@ internal class Installer(private val context: Context, private var activity: Act
             loadAPKFile(apkPath, session)
             val intent = Intent(context, activity!!.javaClass)
             intent.action = packageInstalledAction
-            val pendingIntent = PendingIntent.getActivity(context, 0, intent, 0)
+            val pendingIntent =
+                PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE)
             val statusReceiver = pendingIntent.intentSender
             session.commit(statusReceiver)
             session.close()
@@ -42,7 +43,8 @@ internal class Installer(private val context: Context, private var activity: Act
         try {
             packageManager = activity.packageManager
             packageInstaller = packageManager.packageInstaller
-            val params = PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
+            val params =
+                PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 params.setInstallReason(PackageManager.INSTALL_REASON_USER)
