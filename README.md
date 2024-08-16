@@ -10,6 +10,17 @@
 - 新增`openAppMarket`方法
 - 新增`openAppSettingDetail`方法
 
+## 补充一点
+
+`FileProvider`资源配置需要包含`root-path`:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path name="external_files" path="."/>
+    <root-path name="root" path="" />
+</paths>
+```
 ---
 
 # android_package_installer
