@@ -1,3 +1,7 @@
+## 0.0.2+2
+
+- 更新文档
+
 ## 0.0.2+1
 
 - 原库的`installApk`方法调用的是`PackageInstaller.Session`方法实现的. [PackageInstaller](https://developer.android.com/reference/android/content/pm/PackageInstaller) 我这里测试就没成功过. 所以这里更改了此方法的默认实现为`Intent.ACTION_VIEW`
